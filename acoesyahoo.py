@@ -10,6 +10,8 @@ df = yf.download(ticker, start=perInicio, end=perFin, rounding=True);
 df.sort_values(by=['Date'], inplace=True, ascending=False);
 df.reset_index(inplace=True);
 
-df = pd.concat([pd.Series(ticker, name='Ticker'), df], axis=1)
+# se você quiser adicionar uma coluna de ticker basta descomentar abaixo 
+
+# df = pd.concat([pd.Series(ticker, name='Ticker'), df], axis=1)
 
 print(df)
